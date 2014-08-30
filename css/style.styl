@@ -1,17 +1,22 @@
 @import "nib"
 @import "module-keyframes"
 
-color_texto = #292929
+/* Variables and functions */
+color_texto = #323232
 color_cyan = #009bdb
 color_magenta = #ba007c
 color_amarillo = #feee00
 color_verde = #2CA51B
 
+.clearfix
+	clearfix()
+
+
 *
- 	box-sizing border-box
+	box-sizing border-box
 
 body
-	background url("../img/bg/woods.jpg") top center / cover no-repeat fixed #523A1C
+	background url("../img/bg/tds.jpg") top left / cover no-repeat fixed #ccc
 	color color_texto
 	font-size 16px
 	font-family 'Roboto', Arial, Helvetica
@@ -34,7 +39,7 @@ a
 		text-decoration underline
 
 .theContainer
-	background #fff
+	background rgba(255,2552,255,.9)
 	box-shadow 0 0 10px 5px rgba(0,0,0,0.5)
 	margin 0 auto
 	padding 1em
@@ -42,6 +47,7 @@ a
 .profile
 	&-photo
 		background #fff
+		border 1px solid #ccc
 		box-shadow 0 0 10px rgba(0,0,0,.5)
 		margin 0 auto
 		max-width 220px
@@ -55,23 +61,26 @@ a
 			text-align center
 			font-family Courier, "Lucida Console"
 			font-weight bold
-	&-name
-		font-size 280%
+	&-person
+		font-size 300%
 		margin 20px 0 20px
+		text-align center
 		text-transform uppercase
 	&-job
 		color #808080
-		font-size 200%
+		font-size 220%
 		letter-spacing -2px
 		margin 20px 0
+		text-align center
 	&-description
 		background #000
 		border 6px solid #868686
 		border-top 1.1em solid #868686
 		border-radius 6px 6px 0 0 
-		font-family Courier
+		clear both
 		color #fff
-		margin 1em 0
+		font-family Courier
+		margin 0 0 2em
 		padding 0em 1em
 		&-username
 		&-at
@@ -114,7 +123,8 @@ a
 
 .section
 	border-top 4px dashed #444
-	margin-top 1em
+	clear both
+	margin 2em 0
 	&-title
 		color white
 		font-weight normal
@@ -129,5 +139,54 @@ a
 		&--green
 			background color_verde
 
+/*
+320
+480
+768
+992
+1200
+*/
 
+@media screen and (min-width: 769px)
+	.profile
+		&-photo
+			float left
+			margin 1em 1em 3em 2em
+			max-width 250px
+		&-person
+			float right
+			font-size 330%
+			text-align right
+			width 350px
+		&-job
+			clear right
+			font-size 260%
+			text-align right
+		&-contactInfo
+			width 50%
+			float left
+		&-social
+			width 50% right
+			.icon
+				margin 6px 25px
+
+@media screen and (min-width: 992px)
+	.theContainer
+		max-width 960px
+	.profile
+		&-person
+			font-size 450%
+			width 600px
+		&-description
+			float left
+			width 48%
+		&-contactInfo
+			float right
+			width 48%
+		&-social
+			float right
+			width 48%
+			.icon
+				margin 0px 40px
+				font-size 140%
 
