@@ -1,3 +1,4 @@
+@charset "utf-8";
 @-moz-keyframes cursor_animate {
   0% {
     color: #fff;
@@ -202,7 +203,6 @@
     transform: rotate3d(0, 0, 1, 0deg);
   }
 }
-/* Variables and functions */
 .clearfix {
   zoom: 1;
 }
