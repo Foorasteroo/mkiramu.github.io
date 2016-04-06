@@ -1,12 +1,12 @@
 @import "nib"
-@import "module-keyframes"
+@import "keyframes"
 
 /* Variables and functions */
-color_texto = #323232
-color_cyan = #009bdb
-color_magenta = #ba007c
-color_amarillo = #feee00
-color_verde = #2CA51B
+$color_texto = #323232
+$color_cyan = #009bdb
+$color_magenta = #ba007c
+$color_amarillo = #feee00
+$color_verde = #2CA51B
 
 .clearfix
 	clearfix()
@@ -16,8 +16,8 @@ color_verde = #2CA51B
 	box-sizing border-box
 
 body
-	background url("../img/bg/tds.jpg") top left / cover no-repeat fixed #ccc
-	color color_texto
+	background url("../../img/bg/tds.jpg") top left / cover no-repeat fixed #ccc
+	color $color_texto
 	font-size 16px
 	font-family 'Roboto', Arial, Helvetica
 	line-height 1.25
@@ -74,8 +74,8 @@ a
 		text-align center
 	&-description
 		background #000
-		border 6px solid #868686
-		border-top 1.1em solid #868686
+		border 6px solid #a0a0a0
+		border-top 1.1em solid #a0a0a0
 		border-radius 6px 6px 0 0 
 		clear both
 		color #fff
@@ -131,13 +131,13 @@ a
 		padding 10px
 		text-shadow 1px 1px 1px #444
 		&--cyan
-			background color_cyan
+			background $color_cyan
 		&--magenta
-			background color_magenta
+			background $color_magenta
 		&--yellow
-			background color_amarillo
+			background $color_amarillo
 		&--green
-			background color_verde
+			background $color_verde
 
 /*
 320
