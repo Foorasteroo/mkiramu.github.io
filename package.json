@@ -1,0 +1,29 @@
+{
+  "name": "mkiramu.github.io",
+  "version": "1.0.0",
+  "description": "Curriculum Vitae ===========",
+  "main": "index.html",
+  "scripts": {
+    "css": "stylus -u nib -c css/style.styl",
+    "css:watch": "npm run css -- -w",
+    "server": "browser-sync start -s -f '!node_modules/' './**/*'",
+    "develop": "concurrently 'npm run css:watch' 'npm run server'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkiramu/mkiramu.github.io.git"
+  },
+  "author": "Guillermo Dolores Vicencio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkiramu/mkiramu.github.io/issues"
+  },
+  "homepage": "https://github.com/mkiramu/mkiramu.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "concurrently": "^3.4.0",
+    "nib": "^1.1.2",
+    "stylus": "^0.54.5"
+  }
+}
